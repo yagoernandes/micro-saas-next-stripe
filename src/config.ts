@@ -1,4 +1,4 @@
-export default {
+const config = {
     stripe:{
         publicKey: process.env.STRIPE_PUBLIC_KEY,
         secretKey: process.env.STRIPE_SECRET_KEY,
@@ -6,3 +6,4 @@ export default {
         webhookSecret: process.env.STRIPE_WEBHOOK_SECRET
     }
 }
+export default config
