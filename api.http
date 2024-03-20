@@ -1,0 +1,41 @@
+GET http://localhost:3000/api/users HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/users/28f2d5d5-336b-4de4-ab13-638363d162c3 HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Yago Ernandes",
+    "email": "yago7000@gmail.com"
+}
+
+###
+
+GET http://localhost:3000/api/todo HTTP/1.1
+Content-Type: application/json
+X-USER-ID: 28f2d5d5-336b-4de4-ab13-638363d162c3
+
+###
+
+POST http://localhost:3000/api/todo HTTP/1.1
+Content-Type: application/json
+X-USER-ID: 28f2d5d5-336b-4de4-ab13-638363d162c3
+
+{
+    "title": "Comprar leite"
+}
+
+###
+
+POST http://localhost:3000/api/checkout HTTP/1.1
+Content-Type: application/json
+X-USER-ID: 28f2d5d5-336b-4de4-ab13-638363d162c3
+
+{
+    "plan": "PRO"
+}
