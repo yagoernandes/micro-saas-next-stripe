@@ -5,12 +5,6 @@ import { NextResponse } from "next/server";
 import Stripe from 'stripe';
 const stripe = new Stripe(config.stripe.secretKey || "");
 
-export const configAPI = {
-    api: {
-        bodyParser: false,
-    },
-};
-
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
 const endpointSecret = config.stripe.webhookSecret || "";
 
